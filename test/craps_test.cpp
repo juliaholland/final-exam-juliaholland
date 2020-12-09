@@ -19,3 +19,17 @@ TEST_CASE("Verify Random Die"){
        REQUIRE((value>=1&&value<=6));
    }   
 };
+
+TEST_CASE("Verify Roll die"){
+   Die die1;
+   Die die2;
+   Roll roll(die1,die2);
+   for (int i = 0; i<10; i++)
+   {
+       roll.roll_die();
+       int value = roll.roll_value();
+       REQUIRE((value>=2 && value<=12));
+     
+   }
+};
+
